@@ -35,3 +35,8 @@ class Solution:
             return x==y
         else:
             return x==y
+        
+
+class Solution:
+    def ispaln(self,x:int):
+        return(str(x)==str(x[::-1]))

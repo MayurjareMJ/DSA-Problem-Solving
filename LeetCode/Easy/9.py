@@ -37,6 +37,7 @@ class Solution:
             return x==y
         
 
+#Apporch 2
 class Solution:
     def ispaln(self,x:int):
         return(str(x)==str(x[::-1]))

@@ -18,7 +18,6 @@
 
 
 # Output:
-
 # 2
 
 
@@ -36,7 +35,6 @@
 # Output:
 
 # 0
-
 
 # Explanation:
 # The sum that is closest to the target is 0.

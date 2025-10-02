@@ -124,3 +124,34 @@ class Solution:
             i += 1
 
         return sign * num
+
+###########################################
+#Solutions 2:
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        INT_MAX, INT_MIN = 2**31 - 1, -2**31
+
+        # Step 1: Trim leading spaces
+        s = s.lstrip()
+        if not s:
+            return 0
+
+        # Step 2: Handle sign
+        sign, i = 1, 0
+        if s[0] in "+-":
+            sign = -1 if s[0] == "-" else 1
+            i += 1
+
+        # Step 3: Parse digits
+        num = 0
+        while i < len(s) and s[i].isdigit():
+            digit = ord(s[i]) - ord("0")  # faster than int(s[i])
+
+            # Step 4: Handle overflow
+            if num > (INT_MAX - digit) // 10:
+                return INT_MAX if sign == 1 else INT_MIN
+
+            num = num * 10 + digit
+            i += 1
+
+        return sign * num

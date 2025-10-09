@@ -66,7 +66,6 @@
 # Output: 0
 
 # Explanation:
-
 # Step 1: "0-1" (no characters read because there is no leading whitespace)
 #          ^
 # Step 2: "0-1" (no characters read because there is neither a '-' nor '+')
